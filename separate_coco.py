@@ -136,10 +136,11 @@ def separateKFoldCoco(k_fold_image_folder, whole_coco_path, coco_save_path, k=5)
 
 
 if __name__ == '__main__':
-    k_fold_image_folder = os.path.join(os.getcwd(), '../Datasets/K_Fold/contrast_brightness_augmentation_4times/')
-    whole_coco_path = os.path.join(os.getcwd(), '../Datasets/whole_without_augmentation_corrected.json')
-    coco_save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/contrast_brightness_augmentation_4times')
+    k_fold_image_folder = os.path.join(os.getcwd(), '../Datasets/K_Fold/48times_augmentation')
+    whole_coco_path = os.path.join(os.getcwd(), '../Datasets/chimei+ChestX_48times_augmentation/labels/all.json')
+    coco_save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/48times_augmentation')
     k = 5
     separateKFoldCoco(k_fold_image_folder, whole_coco_path, coco_save_path, k)
 
-    # separate_coco(train_img_path, val_img_path, test_img_path, json_path, save_path, ext='.png')
+
+    # separate_coco(train_img_path, val_img_path, test_img_path, json_path, save_path, ext='.jpg')

@@ -26,8 +26,8 @@ def separateDataFor_K_Fold(whole_image_path, k_fold_save_path, K=5):
             print(f"saved image into {image_save_path}")
 
 def main():
-    whole_image_path = os.path.join(os.getcwd(), '../Datasets/chimei+ChestX_new_whole_before_aug')
-    k_fold_save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/contrast_brightness_augmentation_4times')
+    whole_image_path = os.path.join(os.getcwd(), '../Datasets/chimei+ChestX_48times_augmentation/images')
+    k_fold_save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/48times_augmentation')
     K = 5
     separateDataFor_K_Fold(whole_image_path, k_fold_save_path, K)
 

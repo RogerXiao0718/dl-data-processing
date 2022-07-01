@@ -56,8 +56,8 @@ def convertCategories(coco_path, save_path):
 
 
 if __name__ == '__main__':
-    coco_json1_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/24times_augmentation/01.json')
-    coco_json2_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/24times_augmentation/23.json')
-    save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/24times_augmentation/0123.json')
+    coco_json1_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/48times_augmentation/01.json')
+    coco_json2_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/48times_augmentation/23.json')
+    save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/48times_augmentation/0123.json')
     merge_coco(coco_json1_path, coco_json2_path, save_path)
     #convertCategories(coco_json2_path, coco_json2_path)

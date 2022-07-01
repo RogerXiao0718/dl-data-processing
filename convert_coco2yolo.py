@@ -73,9 +73,9 @@ def convert_coco2yolo(image_path, json_path, save_path):
                 print(f"update {label_path}: ",  content)
 
 if __name__ == '__main__': # 0234
-    image_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/24times_augmentation_for_yolov5/K_Fold_0/images/val')
-    json_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/24times_augmentation/0.json')
-    save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/24times_augmentation_for_yolov5/K_Fold_0/labels/val')
+    image_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/48times_augmentation_for_yolov5/K_Fold_2/images/val')
+    json_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/48times_augmentation/2.json')
+    save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/48times_augmentation_for_yolov5/K_Fold_2/labels/val')
     convert_coco2yolo(image_path, json_path, save_path)
     # for filename in os.listdir(save_path):
     #     filename = os.path.join(save_path, filename)

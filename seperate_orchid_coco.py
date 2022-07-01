@@ -77,8 +77,8 @@ def separate_coco(train_img_path, val_img_path, json_path, save_path, ext='.jpg'
 
 
 if __name__ == '__main__':
-    train_img_path = os.path.join(os.getcwd(), "../Dataset/images/train")
-    val_img_path = os.path.join(os.getcwd(), "../Dataset/images/val")
-    json_path = os.path.join(os.getcwd(), "../Dataset/label/orchid_all_annotation.json")
-    save_path = os.path.join(os.getcwd(), "../Dataset/label/seperated_labels")
+    train_img_path = os.path.join(os.getcwd(), "../TBrain_AI/Dataset/orchid_demo/val")
+    val_img_path = os.path.join(os.getcwd(), "../TBrain_AI/Dataset/orchid_demo/val_sub")
+    json_path = os.path.join(os.getcwd(), "../TBrain_AI/Dataset/orchid_demo/val_all.json")
+    save_path = os.path.join(os.getcwd(), "../TBrain_AI/Dataset/orchid_demo/")
     separate_coco(train_img_path, val_img_path, json_path, save_path, ext='.jpg')

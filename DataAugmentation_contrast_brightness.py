@@ -22,7 +22,7 @@ def dataAugmentation_contrast_brightness(image_path, json_path, image_savePath, 
             image_file_basename = os.path.basename(image_filename)
             cv2.imwrite(os.path.join(image_savePath, f'./{1}{i}{image_file_basename}'), transformed_image)
             print(f"saved image into {os.path.join(image_savePath, f'{1}{i}{image_file_basename}')}\n")
-            transformed_image = (np.vectorize(lambda p: 255 - p))(transformed_image)
+            transformed_image = 255 - transformed_image
             cv2.imwrite(os.path.join(image_savePath, f"./{2}{i}{image_file_basename}"), transformed_image)
             print(f"saved image into {os.path.join(image_savePath, f'{2}{i}{image_file_basename}')}\n")
 
@@ -68,8 +68,8 @@ def dataAugmentation_contrast_brightness(image_path, json_path, image_savePath, 
 
 if __name__ == '__main__':
     # push
-    image_path = os.path.join(os.getcwd(), "../Datasets/K_Fold/contrast_brightness_24times_before_augmentation/4")
-    json_path = os.path.join(os.getcwd(), "../Datasets/K_Fold/contrast_brightness_24times_before_augmentation/4.json")
-    image_savePath = os.path.join(os.getcwd(), "../Datasets/K_Fold/contrast_brightness_24times_augmentation/4")
-    json_savePath = os.path.join(os.getcwd(), "../Datasets/K_Fold/contrast_brightness_24times_augmentation/4.json")
+    image_path = os.path.join(os.getcwd(), "../Datasets/chimei+ChestX_before_relabeling_and_augmentation/images")
+    json_path = os.path.join(os.getcwd(), "../Datasets/chimei+ChestX_before_relabeling_and_augmentation/labels/all.json")
+    image_savePath = os.path.join(os.getcwd(), "../Datasets/chimei+ChestX_48times_augmentation/brightness_contrast/images")
+    json_savePath = os.path.join(os.getcwd(), "../Datasets/chimei+ChestX_48times_augmentation/brightness_contrast/labels/4times_labels.json")
     dataAugmentation_contrast_brightness(image_path, json_path, image_savePath, json_savePath)

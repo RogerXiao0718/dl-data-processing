@@ -189,12 +189,14 @@ def coco_data_augmentation(img_path, json_path, img_save_path, json_save_path, s
             print(f'saved result_json in {json_save_path}')
 
 if __name__ == '__main__':
-    image_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/contrast_brightness_4times_augmentation/4')
-    json_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/contrast_brightness_4times_augmentation/4.json')
-    image_save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/24times_augmentation/4')
-    json_save_path = os.path.join(os.getcwd(), '../Datasets/K_Fold/24times_augmentation/4.json')
+    image_path = os.path.join(os.getcwd(), '../Datasets/chimei+ChestX_48times_augmentation/brightness_contrast/images')
+    json_path = os.path.join(os.getcwd(), '../Datasets/chimei+ChestX_48times_augmentation/brightness_contrast/labels/4times_labels.json')
+    image_save_path = os.path.join(os.getcwd(), '../Datasets/chimei+ChestX_48times_augmentation/images')
+    json_save_path = os.path.join(os.getcwd(), '../Datasets/chimei+ChestX_48times_augmentation/labels/all.json')
     # styles = [[0, False, False], [5, False, False], [10, False, False], [-5, False, False], [-10, False, False], [0, True, False], [5, True, False], [10, True, False], [-5, True, False], [-10, True, False],
     #           [0, False, True], [5, False, True], [10, False, True], [-5, False, True], [-10, False, True], [0, True, True], [5, True, True], [10, True, True], [-5, True, True], [-10, True, True]]
     styles = [[0, False, False], [10, False, False], [-10, False, False],
-              [0, False, True], [10, False, True], [-10, False, True]]  # 6 times
+              [0, False, True], [10, False, True], [-10, False, True],
+              [0, True, False], [10, True, False], [-10, True, False],
+              [0, True, True], [10, True, True], [-10, True, True]]  # 12 times
     coco_data_augmentation(image_path, json_path, image_save_path, json_save_path, styles)

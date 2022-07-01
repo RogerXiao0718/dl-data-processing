@@ -32,7 +32,7 @@ def annotateRectangle(img_dir, label_dir, save_path, ext='png', color=(0, 255, 0
             image = cv2.imread(img_path)
             (H, W, _) = image.shape
             for i, label in enumerate(labels):
-                cv2.rectangle(image, (int(W * label[0]), int(H * label[1])), (int(W * label[2]), int(H * label[3])), color, 3)
+                cv2.rectangle(image, (int(W * label[0]), int(H * label[1])), (int(W * label[2]), int(H * label[3])), color, 2)
                 image_save_path = os.path.join(save_path, os.path.basename(img_path))
             cv2.imwrite(image_save_path, image)
             print(f"saved result to {image_save_path}")
@@ -43,4 +43,4 @@ if __name__ == '__main__':
     img_dir = os.path.join(os.getcwd(), '../yolov5/runs/detect/24times_augmentation_K_Fold_0')
     label_dir = os.path.join(os.getcwd(), '../Datasets/K_Fold/24times_augmentation_for_yolov5/K_Fold_0/labels/val')
     save_path = os.path.join(os.getcwd(), '../yolov5/runs/detect/24times_augmentation_K_Fold_0/augmented_val_with_answer')
-    annotateRectangle(img_dir, label_dir, save_path, ext='png', color=(0, 255, 0))
+    annotateRectangle(img_dir, label_dir, save_path, ext='png', color=(0, 255, 0,))

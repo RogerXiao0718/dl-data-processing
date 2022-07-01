@@ -19,8 +19,9 @@ def calcMultiClassRecallPrecision(gt_label_dir, pred_result_path):
 
     with open(pred_result_path, 'r') as pred_file:
         pred_lines = pred_file.readlines()
+        pred_lines = pred_lines[1:]
         for pred_line in pred_lines:
-            pred_line_contents = pred_line.split(" ")
+            pred_line_contents = pred_line.split(",")
             pred_filename = pred_line_contents[0]
             pred_filename = os.path.splitext(pred_filename)[0]
             pred = int(pred_line_contents[1])
